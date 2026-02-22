@@ -1,0 +1,41 @@
+{
+  "name": "inventory-management",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "frontend": "vite --config packages/frontend/vite.config.ts",
+    "backend": "ts-node --esm packages/backend/src/main.ts",
+    "build:frontend": "tsc -p packages/frontend/tsconfig.json && vite build --config packages/frontend/vite.config.ts",
+    "build:backend": "tsc -p packages/backend/tsconfig.json"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.6.0",
+    "lucide-react": "^0.575.0",
+    "@radix-ui/react-slot": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@types/express": "^5.0.0",
+    "@types/cors": "^2.8.17",
+    "@types/node": "^22.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "nx": "^20.4.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.0"
+  }
+}
